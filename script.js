@@ -8,12 +8,14 @@ for (let i = 0; i < 16; i++) {
     Math.random();
 }
 
-const squareDiv = document.querySelector("div");
-squareDiv.addEventListener("mouseover", () => {
-    console.log("test");
-    let r = Math.floor(Math.random() * 255);
-    let g = Math.floor(Math.random() * 255);
-    let b = Math.floor(Math.random() * 255);
-    let squareColor = `rgb(${r},${g},${b})`;
-    squareDiv.style.backgroundColor = squareColor;
+const squareDivs = document.querySelectorAll(".square");
+squareDivs.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+        console.log("test");
+        let r = Math.floor(Math.random() * 255);
+        let g = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
+        let squareColor = `rgb(${r},${g},${b})`;
+        item.style.backgroundColor = squareColor;
+    });
 });
