@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 
     display: flex;
     flex-direction: column;
@@ -11,10 +12,9 @@ body {
 }
 
 #inputBtn {
-    font-family: Arial, Helvetica, sans-serif;
     width: 150px;
     height: 75px;
-    margin: 20px;
+    margin: 50px;
     font-size: 25px;
     border-radius: 25px;
     background-color: aliceblue;
