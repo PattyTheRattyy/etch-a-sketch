@@ -25,9 +25,16 @@ function setGridSize(gridSize) {
     for (let i = 0; i < gridSize*gridSize; i++) {
         const div = document.createElement("div");
         div.classList.add("square");
+
+        // This makes sure the squares are the right size to fit the container
+        let squareSize = 500/gridSize;
+        div.style.width = squareSize+"px";
+        div.style.height = squareSize+"px";
+
         container.appendChild(div);
+        
     }
-    
+
     addColor();
 }
 
@@ -35,7 +42,6 @@ function addColor() {
     squareDivs = document.querySelectorAll(".square");
     squareDivs.forEach((item) => {
         item.addEventListener("mouseover", () => {
-            console.log("test");
             let r = Math.floor(Math.random() * 255);
             let g = Math.floor(Math.random() * 255);
             let b = Math.floor(Math.random() * 255);
